@@ -14,7 +14,7 @@ botui.message.add({
 }).then(function(){
     return botui.action.text({
         action: {
-          placeholder: 'Enter your message here.'
+          placeholder: 'Enter your message.'
         }
     
     });
@@ -30,7 +30,7 @@ botui.message.add({
 }).then(function(){
     return botui.action.text({
         action: {
-            placeholder: 'Enter your message here.'
+            placeholder: 'Enter your message.'
         }
           
     });
@@ -49,7 +49,7 @@ botui.message.add({
 }).then(function(){
     return botui.action.text({
         action: {
-          placeholder: 'Enter your message here.'
+          placeholder: 'Enter your message.'
         }
     
     });

@@ -4,12 +4,12 @@ const response=new Array();
 botui.message.add({
     delay:500,
     loading: true,
-    content: 'Hello. This is Alex, and I am a bot created by the customer service department.'
+    content: 'Hello. I am a customer service bot.'
 }).then(function(){
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'Thank you for contacting us. I am handling your request today. Can you please tell me why you are here, such as delivery delay, incorrect order, etc.?'
+        content:'Thank you for contacting us. What brings you here'
     });
 }).then(function(){
     return botui.action.text({
@@ -75,7 +75,7 @@ botui.message.add({
     return botui.message.add({
         delay:900,
         loading: true,
-        content:'I have processed your request. The issue is resolved.'
+        content:'I have processed your request. I hope your issue has been addressed.'
     });
 }).then(function(){
     sendcomplete();

@@ -9,7 +9,7 @@ botui.message.add({
     return botui.message.add({
         delay:700,
         loading: true,
-        content:'Thank you for contacting us. What brings you here?'
+        content:'Thank you for contacting us. What is the problem you are having?'
     });
 }).then(function(){
     return botui.action.text({

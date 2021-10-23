@@ -90,19 +90,19 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:1200,
+        delay:3000,
         loading: true,
         content:'We are having a problem because of our server update. It is taking longer than usual to retrieve your information and complete your request. Please wait...'
     });
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:6000,
         loading: true,
         content:'We are still retrieving your information. It is going to take a minute or so. Please continue to wait.'
     });
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:10000,
         loading: true,
         content:'We have retrieved your information. The 3rd edition is currently in stock.'
     });

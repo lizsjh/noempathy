@@ -23,23 +23,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:1500,
-        loading: true,
-        content:'Could you tell me why you need to return this textbook in more details?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-    
-    });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:1500,
+        delay:2000,
         loading: true,
         content:'I can help you with that. Could you input your order number below?'
     });
@@ -60,9 +44,21 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:3500,
         loading: true,
-        content:'Have you taken the wrapping off the textbook?'
+        content:'I found out that there has been a system error, and no driver was assigned to your order.'
+    });
+}).then(function(){
+    return botui.message.add({
+        delay:2500,
+        loading: true,
+        content:'We found a nearest driver, and your food can be picked up within five minutes.'
+    });
+}).then(function(){
+    return botui.message.add({
+        delay:1500,
+        loading: true,
+        content:'Would you like to proceed your order?'
     });
 }).then(function(){
     return botui.action.text({
@@ -75,21 +71,9 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:3000,
         loading: true,
-        content:'If you removed the wrapping, it cannot be returned.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:2500,
-        loading: true,
-        content:'Instead, we would like to provide you a 15% off coupon for your next purchase. Please hold on while I am adding the coupon to your account.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:4000,
-        loading: true,
-        content:'The coupon is successfully added to your account.'
+        content:'I have processed your request.'
     });
 }).then(function(){
     sendcomplete();
@@ -101,5 +85,5 @@ botui.message.add({
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2],"text4":response[3],"text5":response[4]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2], "*");
 };

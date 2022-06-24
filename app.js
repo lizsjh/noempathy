@@ -41,19 +41,19 @@ botui.message.add({
     return botui.message.add({
         delay:2000,
         loading: true,
-        content:'Alright. I am looking up your order. Please give me a moment'
+        content:'Alright. Please give me a moment'
     });
 }).then(function(){
     return botui.message.add({
         delay:4000,
         loading: true,
-        content:'I found out that there has been a system error, and no driver was assigned to your order.'
+        content:'I found out that the driver who was assigned to your order did not show up.'
     });
 }).then(function(){
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'We found a nearest driver, and your food can be picked up within five minutes. Would you like to proceed your order?'
+        content:'I found another driver who can pick up your food and deliver it in about thirty minutes. Would you like to proceed with your order, or cancel it and get a refund?'
     });
 }).then(function(){
     return botui.action.text({

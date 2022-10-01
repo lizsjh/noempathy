@@ -53,7 +53,7 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I found the nearest driver, and your food can be picked up within five minutes. Would you like to proceed with your order? If not, you cancel your order as well.'
+        content:'I found the nearest driver, and your food can be picked up within five minutes. Would you like to proceed with your order? If not, we can cancel your order as well.'
     });
 }).then(function(){
     return botui.action.text({

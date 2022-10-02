@@ -72,13 +72,13 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:5000,
         loading: true,
         content:'Let me try to interpret your message using some other methods. Please hold on for a moment.'
     });
 }).then(function(){
     return botui.message.add({
-        delay:10000,
+        delay:20000,
         loading: true,
         content:'I have processed your request. The issue is resolved.'
     });

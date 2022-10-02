@@ -68,26 +68,17 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I am not capable of interpreting your message because of my limited knowledge base and training. Can you repeat?'
+        content:'I cannot understand your message because my knowledge base is limited and I haven not received a lot of training.'
     });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-        });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
 }).then(function(){
     return botui.message.add({
         delay:3000,
         loading: true,
-        content:'I will process your request. Please hold on for a moment.'
+        content:'Let me try to interpret your message using some other methods. Please hold on for a moment.'
     });
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:10000,
         loading: true,
         content:'I have processed your request. The issue is resolved.'
     });
@@ -101,5 +92,5 @@ botui.message.add({
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2],"text4":response[3]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2]}, "*");
 };

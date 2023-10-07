@@ -68,7 +68,7 @@ botui.message.add({
     return botui.message.add({
         delay:10000,
         loading: true,
-        content:'It is taking longer than usual because I am gathering more information to process your request'
+        content:'It is taking longer than usual because I am still gathering some information to process your request'
     });
 }).then(function(){
     return botui.message.add({

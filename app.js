@@ -2,12 +2,12 @@ var botui=new BotUI('app');
 const response=new Array();
 
 botui.message.add({
-    delay:1000,
+    delay:2000,
     loading: true,
     content: 'Hello. This is Alex, and I am a bot created by the customer service department.'
 }).then(function(){
     return botui.message.add({
-        delay:1200,
+        delay:2000,
         loading: true,
         content:'I am handling your request today. What brings you here?'
     });
@@ -23,7 +23,7 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:4000,
         loading: true,
         content:'I can help you with that. Could you tell me your order number below?'
     });
@@ -51,7 +51,7 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:5000,
         loading: true,
         content:'I found the nearest driver, and your food can be picked up within five minutes. Would you like to proceed with your order? If not, we can cancel your order as well.'
     });
@@ -66,15 +66,15 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:3000,
+        delay:10000,
         loading: true,
-        content:'I cannot understand your message because my knowledge base is limited and I haven not received a lot of training.'
+        content:'It is taking longer than usual because I am gathering more information to process your request'
     });
 }).then(function(){
     return botui.message.add({
-        delay:5000,
+        delay:4000,
         loading: true,
-        content:'Let me try to interpret your message using some other methods. Please hold on for a moment.'
+        content:'Let me keep trying to process your request. Please hold on for a moment.'
     });
 }).then(function(){
     return botui.message.add({
@@ -85,7 +85,7 @@ botui.message.add({
 }).then(function(){
     sendcomplete();
     return botui.message.add({
-        delay:2000,
+        delay:3000,
         loading: true,
         content:'Please contact us again if you need further assistance. Bye.'
     });

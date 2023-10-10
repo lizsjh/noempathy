@@ -4,11 +4,13 @@ const response=new Array();
 botui.message.add({
     delay:2000,
     loading: true,
+    photo: true,
     content: 'Hello. This is Alex, and I am a bot created by the customer service department.'
 }).then(function(){
     return botui.message.add({
         delay:2000,
         loading: true,
+        photo: true,
         content:'I am handling your request today. What brings you here?'
     });
 }).then(function(){
@@ -25,6 +27,7 @@ botui.message.add({
     return botui.message.add({
         delay:4000,
         loading: true,
+        photo: true,
         content:'I can help you with that. Could you tell me your order number below?'
     });
 }).then(function(){
@@ -41,18 +44,21 @@ botui.message.add({
     return botui.message.add({
         delay:2000,
         loading: true,
+        photo: true,
         content:'Alright. Please give me a moment'
     });
 }).then(function(){
     return botui.message.add({
         delay:4000,
         loading: true,
+        photo: true,
         content:'I checked your order. There has been a system error, and no driver was assigned to your order.'
     });
 }).then(function(){
     return botui.message.add({
         delay:5000,
         loading: true,
+        photo: true,
         content:'I found the nearest driver, and your food can be picked up within five minutes. Would you like to proceed with your order? If not, we can cancel your order as well.'
     });
 }).then(function(){
@@ -68,18 +74,21 @@ botui.message.add({
     return botui.message.add({
         delay:30000,
         loading: true,
+        photo: true,
         content:'It is taking longer than usual because I am still gathering some information to process your request'
     });
 }).then(function(){
     return botui.message.add({
         delay:4000,
         loading: true,
+        photo: true,
         content:'Let me keep trying to process your request. Please hold on for a moment.'
     });
 }).then(function(){
     return botui.message.add({
         delay:30000,
         loading: true,
+        photo: true,
         content:'I have processed your request. The issue is resolved.'
     });
 }).then(function(){
@@ -87,6 +96,7 @@ botui.message.add({
     return botui.message.add({
         delay:3000,
         loading: true,
+        photo: true,
         content:'Please contact us again if you need further assistance. Bye.'
     });
 });

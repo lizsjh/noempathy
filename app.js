@@ -73,14 +73,14 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:4000,
         loading: true,
         photo: true,
         content:'I accidentally pulled up the wrong order.'
     });
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:4000,
         loading: true,
         photo: true,
         content:'I am searching for your order again. Please hold on.'
@@ -141,7 +141,7 @@ botui.message.add({
 }).then(function(){
     sendcomplete();
     return botui.message.add({
-        delay:2000,
+        delay:4000,
         loading: true,
         photo: true,
         content:'Please contact us again if you need further assistance. Bye.'

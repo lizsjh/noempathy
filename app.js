@@ -129,13 +129,6 @@ botui.message.add({
         delay:30000,
         loading: true,
         photo: true,
-        content:'It is taking longer than usual because I am still gathering some information to process your request. Please hold on again.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:30000,
-        loading: true,
-        photo: true,
         content:'I have processed your request. The issue is resolved.'
     });
 }).then(function(){

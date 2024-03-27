@@ -52,7 +52,7 @@ botui.message.add({
         delay:5000,
         loading: true,
         photo: true,
-        content:'You have ordered one pair of jeans, one swimsuit, and one necklace. Can you confirm?'
+        content:'You have ordered one baseball cap, one swimsuit, and one necklace. Can you confirm?'
     });
 }).then(function(){
     return botui.action.text({
@@ -66,17 +66,10 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:2000,
-        loading: true,
-        photo: true,
-        content:'Oh, in fact, you ordered a different set of products.'
-    });
-}).then(function(){
-    return botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'I accidentally pulled up the wrong order.'
+        content:'Oh, I pulled up the wrong order.'
     });
 }).then(function(){
     return botui.message.add({
@@ -103,10 +96,10 @@ botui.message.add({
     response.push(res.value);
 }).then(function(){
     return botui.message.add({
-        delay:2000,
+        delay:3000,
         loading: true,
         photo: true,
-        content:'Which item is missing?'
+        content:'Could you confirm the missing item?'
     });
 }).then(function(){
     return botui.action.text({
@@ -126,7 +119,7 @@ botui.message.add({
     });
 }).then(function(){
     return botui.message.add({
-        delay:30000,
+        delay:10000,
         loading: true,
         photo: true,
         content:'I have processed your request. The issue is resolved.'

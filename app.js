@@ -52,7 +52,7 @@ botui.message.add({
         delay:5000,
         loading: true,
         photo: true,
-        content:'You have ordered one baseball cap, one swimsuit, and one necklace. Can you confirm?'
+        content:'You have ordered one swimsuit, one necklace, and one baseball cap. Can you confirm?'
     });
 }).then(function(){
     return botui.action.text({

@@ -8,10 +8,51 @@ botui.message.add({
     content: 'Hello. This is Alex, and I am a bot created by the customer service department.'
 }).then(function(){
     return botui.message.add({
+        delay:4000,
+        loading: true,
+        photo: true,
+        content:'I am handling your request today. What brings you here? If this is about your order, please provide your order number as well.'
+    });
+}).then(function(){
+    return botui.action.text({
+        action: {
+          placeholder: 'Enter your message.'
+        }
+    
+    });
+}).then(function (res) { 
+    console.log(res.value);
+    response.push(res.value);
+}).then(function(){
+    return botui.message.add({
+        delay:4000,
+        loading: true,
+        photo: true,
+        content:'I can help you with that. First, could you tell me why you need to replace or return this textbook?'
+    });
+}).then(function(){
+    return botui.action.text({
+        action: {
+          placeholder: 'Enter your message.'
+        }
+    
+    });
+}).then(function (res) { 
+    console.log(res.value);
+    response.push(res.value);
+}).then(function(){
+    return botui.message.add({
         delay:2000,
         loading: true,
         photo: true,
-        content:'I am handling your request today. What brings you here?'
+        content:'Got it. Please give me a moment while pulling up your order.'
+    });
+}).then(function(){
+    return botui.message.add({
+        delay:6000,
+        loading: true,
+        photo: true,
+        content:'The newest edition is currently in stock. It costs $150 more. Please confirm if you would like to proceed with the exchange. '
     });
 }).then(function(){
     return botui.action.text({
@@ -28,78 +69,21 @@ botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'I can help you with that. First, could you tell me your order number?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-    
-    });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:2000,
-        loading: true,
-        photo: true,
-        content:'Alright. Please give me a moment while pulling up your order.'
-    });
-}).then(function(){
-    return botui.message.add({
-        delay:5000,
-        loading: true,
-        photo: true,
-        content:'You have ordered one swimsuit, one necklace, and one baseball cap. Can you confirm?'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-    
-    });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:4000,
-        loading: true,
-        photo: true,
-        content:'Oh, I pulled up the wrong order.'
+        content:'Oh, in fact, I pulled up the information about a wrong textbook.'
     });
 }).then(function(){
     return botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'I am searching for your order again. Please hold on.'
+        content:'I am searching for the correct information again. Please hold on.'
     });
 }).then(function(){
     return botui.message.add({
         delay:30000,
         loading: true,
         photo: true,
-        content:'Your order includes one pair of jeans, one sweater, and one baseball cap. Please confirm.'
-    });
-}).then(function(){
-    return botui.action.text({
-        action: {
-          placeholder: 'Enter your message.'
-        }
-        });
-}).then(function (res) { 
-    console.log(res.value);
-    response.push(res.value);
-}).then(function(){
-    return botui.message.add({
-        delay:3000,
-        loading: true,
-        photo: true,
-        content:'Could you confirm the missing item?'
+        content:'The 3rd edition is currently in stock. You just have to pay $50 more for the exchange. Would you still like to exchange the book? '
     });
 }).then(function(){
     return botui.action.text({
@@ -115,7 +99,7 @@ botui.message.add({
         delay:4000,
         loading: true,
         photo: true,
-        content:'I can create a new order for the missing item to be delivered within a day. Please give me a moment.'
+        content:'Alright. Please give me a moment.'
     });
 }).then(function(){
     return botui.message.add({
@@ -135,5 +119,5 @@ botui.message.add({
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2], "text4":response[3], "text5":response[4]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2], "text4":response[3]}, "*");
 };

@@ -52,7 +52,7 @@ botui.message.add({
         delay:6000,
         loading: true,
         photo: true,
-        content:'The newest edition is currently in stock. It costs $150 more. Please confirm if you would like to proceed with the exchange. '
+        content:'The 2nd edition is currently in stock. It costs $125 more. Please confirm if you would like to proceed with the exchange. '
     });
 }).then(function(){
     return botui.action.text({
